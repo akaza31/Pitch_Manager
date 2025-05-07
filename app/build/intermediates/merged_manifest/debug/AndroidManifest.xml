@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.doantotnghiep"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <queries>
+
+        <!-- Query Camera Packages -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <!-- Query Open Document -->
+        <intent>
+            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name="com.example.doantotnghiep.MyApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logogs"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logogs"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.DuAn1_PRO1121" >
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.SalaryDetailsActivityAdmin"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.SalaryDetailsActivityStaff"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.ShowDetailsStatistical"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.ShowCaThiDauActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.doantotnghiep.activity.user.ChangePassActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.doantotnghiep.activity.user.ChangeProfileActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.doantotnghiep.activity.user.HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.user.ProfileActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.doantotnghiep.activity.SelectTypeActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.doantotnghiep.activity.user.NapTienActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.CategoryPitchActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.CategoryManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.user.UserDatSanChiTietActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.user.UserMainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.ListServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.ListCustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.MainActivity"
+            android:exported="false" />
+        <activity android:name="com.example.doantotnghiep.activity.admin.DatSanChiTietActivity" />
+        <activity
+            android:name="com.example.doantotnghiep.activity.admin.FormActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/Theme.Transparent.ImagePicker" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <provider
+            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
+            android:authorities="com.example.doantotnghiep.imagepicker.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/image_picker_provider_paths" />
+        </provider>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.doantotnghiep.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>
