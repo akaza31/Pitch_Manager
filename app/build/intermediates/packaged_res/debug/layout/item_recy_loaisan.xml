@@ -15,7 +15,7 @@
 
         <TextView
             android:id="@+id/tv_id_item_loaisan"
-            android:background="@color/dark_blue"
+            android:background="@color/my_blue"
             android:text="1"
             android:gravity="center"
             android:textColor="@color/white"

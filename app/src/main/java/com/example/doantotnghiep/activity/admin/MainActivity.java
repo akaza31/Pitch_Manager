@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    public static int CURRENT_FRAGMENT = 0;
+    public static int CURRENT_FRAGMENT = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,18 +60,14 @@ public class MainActivity extends AppCompatActivity {
             Menu menu = navigationView.getMenu();
             menu.findItem(R.id.item_thongke).setVisible(false);
             menu.findItem(R.id.item_nhanvien).setVisible(false);
+
         }
 
         navigationView.setNavigationItemSelectedListener(item -> {
 
             Menu menu = navigationView.getMenu();
 
-            if(item.getItemId() == R.id.item_datsan && CURRENT_FRAGMENT!=0){
-                menu.findItem(item.getItemId()).setChecked(true);
-                CURRENT_FRAGMENT = 0;
-                replaceFragment(new DatSanFragment());
-                getSupportActionBar().setTitle("Đặt Sân");
-            }else if(item.getItemId() == R.id.item_sanbong && CURRENT_FRAGMENT!=1){
+            if(item.getItemId() == R.id.item_sanbong && CURRENT_FRAGMENT!=1){
                 menu.findItem(item.getItemId()).setChecked(true);
                 CURRENT_FRAGMENT = 1;
                 replaceFragment(new SanBongFragment());
@@ -143,8 +139,8 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
-        replaceFragment(new DatSanFragment());
-        getSupportActionBar().setTitle("Đặt Sân");
+        replaceFragment(new SanBongFragment());
+        getSupportActionBar().setTitle("Sân bóng");
     }
 
     public void replaceFragment(Fragment fragment){

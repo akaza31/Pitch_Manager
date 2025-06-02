@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\drawable_logo.png.flat",
-        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\drawable\\logo.png"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\drawable_ic_history.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\drawable\\ic_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\drawable\\logo.png"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\drawable_ic_pitch.xml.flat",
@@ -36,12 +36,12 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\menu\\navi_menu.xml"
     },
     {
-        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\drawable_statistical.png.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\drawable\\statistical.png"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\layout_fragment_signup.xml.flat",
@@ -74,6 +74,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\layout_dialog_add_nv.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\layout\\dialog_add_nv.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\drawable_logo3.png.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\drawable\\logo3.png"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\layout_activity_nap_tien.xml.flat",
@@ -130,10 +134,6 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "com.example.doantotnghiep.app-merged_res-37:/layout_datsan_chitiet_layout.xml.flat",
-        "source": "com.example.doantotnghiep.app-main-39:/layout/datsan_chitiet_layout.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\color_item_text_color.xml.flat",
@@ -260,6 +260,10 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\raw\\user_anim.json"
     },
     {
+        "merged": "com.example.doantotnghiep.app-merged_res-37:/layout_activity_user_dat_san_chi_tiet.xml.flat",
+        "source": "com.example.doantotnghiep.app-main-39:/layout/activity_user_dat_san_chi_tiet.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\layout_fragment_san_bong.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\layout\\fragment_san_bong.xml"
     },
@@ -338,10 +342,6 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\drawable_ic_screen.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\drawable\\ic_screen.xml"
-    },
-    {
-        "merged": "com.example.doantotnghiep.app-merged_res-37:/layout_item_khachhang.xml.flat",
-        "source": "com.example.doantotnghiep.app-main-39:/layout/item_khachhang.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\drawable_ic_circle_check.xml.flat",
@@ -494,10 +494,6 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\layout_fragment_phieu_thong_tin.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-main-39:\\layout\\fragment_phieu_thong_tin.xml"
-    },
-    {
-        "merged": "com.example.doantotnghiep.app-merged_res-37:/layout_activity_change_profile.xml.flat",
-        "source": "com.example.doantotnghiep.app-main-39:/layout/activity_change_profile.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\7.4\\com.example.doantotnghiep.app-merged_res-37:\\layout_activity_main.xml.flat",

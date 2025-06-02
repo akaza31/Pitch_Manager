@@ -46,7 +46,7 @@ public class PitchAdapter extends RecyclerView.Adapter<PitchAdapter.ViewHolder> 
         }else{
             holder.tv2.setText("Hoạt động");
             holder.tv2.setTextColor(context.getResources().getColor(R.color.green));
-            holder.tv1.setBackgroundColor(context.getResources().getColor(R.color.dark_blue));
+            holder.tv1.setBackgroundColor(context.getResources().getColor(R.color.my_blue));
         }
         PithCategory category = MyDatabase.getInstance(context).
                 pitchCategoryDAO().getCategoryPitchWithId(list.get(position).getCategoryId()).get(0);
@@ -75,8 +75,10 @@ public class PitchAdapter extends RecyclerView.Adapter<PitchAdapter.ViewHolder> 
             itemView.setOnClickListener(v->{
                 onClick.myOnClick(list.get(getAdapterPosition()));
             });
+
             cardView = itemView.findViewById(R.id.cardview_pitch);
         }
+
     }
 
 
@@ -84,9 +86,11 @@ public class PitchAdapter extends RecyclerView.Adapter<PitchAdapter.ViewHolder> 
         this.onClick = onClick;
     }
 
+
     public interface MyOnClick{
         void myOnClick(Pitch pitch);
     }
+
     public void setData(List<Pitch> list){
         this.list = list;
         notifyDataSetChanged();

@@ -46,7 +46,7 @@ public class RecyclerDatSanAdapter extends RecyclerView.Adapter<RecyclerDatSanAd
         }else{
             holder.tv2.setText("Hoạt động");
             holder.tv2.setTextColor(context.getResources().getColor(R.color.green));
-            holder.tv1.setBackgroundColor(context.getResources().getColor(R.color.dark_blue));
+            holder.tv1.setBackgroundColor(context.getResources().getColor(R.color.my_blue));
         }
         PithCategory category = MyDatabase.getInstance(context).
                 pitchCategoryDAO().getCategoryPitchWithId(list.get(position).getCategoryId()).get(0);

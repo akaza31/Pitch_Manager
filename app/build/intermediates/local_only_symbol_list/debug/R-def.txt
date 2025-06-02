@@ -72,6 +72,7 @@ drawable icon_buy_history
 drawable item_navi_background
 drawable logo
 drawable logo2
+drawable logo3
 drawable logogs
 drawable logout
 drawable minus
@@ -255,7 +256,6 @@ id img_select_san9
 id img_select_san9_user
 id item_accept_naptien
 id item_dangxuat
-id item_datsan
 id item_datsan_user
 id item_dichvu
 id item_giothidau

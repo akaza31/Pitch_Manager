@@ -504,16 +504,21 @@ public class UserDatSanChiTietActivity extends AppCompatActivity {
 
     public void setResourceForImageSelect() {
         for (int i = 0; i < listSelect.size(); i++) {
-            if (typeSelect[i] == type_add) {
-                listSelect.get(i).setImageResource(R.drawable.ic_add);
-            } else if (typeSelect[i] == type_full) {
-                listSelect.get(i).setImageResource(R.drawable.soldout_png);
-            } else if (typeSelect[i] == type_addGray) {
+            if (i <= 2) {
+                typeSelect[i] = type_addGray;
                 listSelect.get(i).setImageResource(R.drawable.ic_add_gray);
-            } else if (typeSelect[i] == type_cancel) {
-                listSelect.get(i).setImageResource(R.drawable.ic_cancel);
-            } else if (typeSelect[i] == type_cancel_gray) {
-                listSelect.get(i).setImageResource(R.drawable.ic_cancel_gray);
+            }else {
+                if (typeSelect[i] == type_add) {
+                    listSelect.get(i).setImageResource(R.drawable.ic_add);
+                } else if (typeSelect[i] == type_full) {
+                    listSelect.get(i).setImageResource(R.drawable.soldout_png);
+                } else if (typeSelect[i] == type_addGray) {
+                    listSelect.get(i).setImageResource(R.drawable.ic_add_gray);
+                } else if (typeSelect[i] == type_cancel) {
+                    listSelect.get(i).setImageResource(R.drawable.ic_cancel);
+                } else if (typeSelect[i] == type_cancel_gray) {
+                    listSelect.get(i).setImageResource(R.drawable.ic_cancel_gray);
+                }
             }
         }
     }

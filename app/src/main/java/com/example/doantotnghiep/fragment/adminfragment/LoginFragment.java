@@ -54,16 +54,16 @@ public class LoginFragment extends Fragment {
         tvCheckAccount = view.findViewById(R.id.tv_check_account);
         checkBox = view.findViewById(R.id.cbx_remember);
 
-        String account,pass;
+        String account, pass;
         SharedPreferences sharedPreferences;
-        if(MyApplication.CURRENT_TYPE == MyApplication.TYPE_ADMIN){
+        if (MyApplication.CURRENT_TYPE == MyApplication.TYPE_ADMIN) {
             sharedPreferences = getContext().getSharedPreferences("ADMIN_ACCOUNT", Context.MODE_PRIVATE);
-        }else{
+        } else {
             sharedPreferences = getContext().getSharedPreferences("USER_ACCOUNT", Context.MODE_PRIVATE);
         }
-        account = sharedPreferences.getString("ACCOUNT","");
-        pass = sharedPreferences.getString("PASSWORD","");
-        checkBox.setChecked(sharedPreferences.getBoolean("REMEMBER",false));
+        account = sharedPreferences.getString("ACCOUNT", "");
+        pass = sharedPreferences.getString("PASSWORD", "");
+        checkBox.setChecked(sharedPreferences.getBoolean("REMEMBER", false));
         edtStk.setText(account);
         edtPassword.setText(pass);
 
@@ -72,33 +72,33 @@ public class LoginFragment extends Fragment {
                 Intent intent = new Intent(getContext(), SplashActivity.class);
                 String stk = edtStk.getText().toString();
                 String password = edtPassword.getText().toString();
-                if(MyApplication.CURRENT_TYPE == MyApplication.TYPE_USER){
+                if (MyApplication.CURRENT_TYPE == MyApplication.TYPE_USER) {
                     List<Customer> customers = MyDatabase.getInstance(getContext()).customerDAO().getCustomerWithPhone(stk, -1);
-                    if(customers.size() > 0){
+                    if (customers.size() > 0) {
                         Customer customer = customers.get(0);
-                        if(password.equals(customer.getPassword())){
+                        if (password.equals(customer.getPassword())) {
                             tvCheckAccount.setVisibility(View.INVISIBLE);
-                            remember(stk,password,checkBox.isChecked(),sharedPreferences);
-                            intent.putExtra("account",stk);
+                            remember(stk, password, checkBox.isChecked(), sharedPreferences);
+                            intent.putExtra("account", stk);
                             getContext().startActivity(intent);
                             Animatoo.INSTANCE.animateZoom(getContext());
-                        }else{
+                        } else {
                             tvCheckAccount.setVisibility(View.VISIBLE);
                         }
-                    }else {
+                    } else {
                         tvCheckAccount.setVisibility(View.VISIBLE);
                     }
-                }else{
+                } else {
                     List<Manager> list = MyDatabase.getInstance(getContext()).managerDAO().getManagerWithPhone(stk, -1);
                     if (list.size() > 0) {
                         Manager manager = list.get(0);
-                        if(manager.getStatus() == MyApplication.NGHI_VIEC){
+                        if (manager.getStatus() == MyApplication.NGHI_VIEC) {
                             tvCheckAccount.setText("Tài khoản của bạn đã bị vô hiệu hóa");
                             tvCheckAccount.setVisibility(View.VISIBLE);
-                        }else {
+                        } else {
                             if (password.equals(manager.getPassword())) {
                                 tvCheckAccount.setVisibility(View.INVISIBLE);
-                                remember(stk,password,checkBox.isChecked(),sharedPreferences);
+                                remember(stk, password, checkBox.isChecked(), sharedPreferences);
                                 intent.putExtra("account", stk);
                                 getContext().startActivity(intent);
                                 Animatoo.INSTANCE.animateZoom(getContext());
@@ -114,13 +114,13 @@ public class LoginFragment extends Fragment {
         });
     }
 
-    public void remember(String account,String pass,boolean remember,SharedPreferences sharedPreferences){
+    public void remember(String account, String pass, boolean remember, SharedPreferences sharedPreferences) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        if(remember){
-            editor.putString("ACCOUNT",account);
-            editor.putString("PASSWORD",pass);
-            editor.putBoolean("REMEMBER",true);
-        }else{
+        if (remember) {
+            editor.putString("ACCOUNT", account);
+            editor.putString("PASSWORD", pass);
+            editor.putBoolean("REMEMBER", true);
+        } else {
             editor.clear();
         }
         editor.apply();

@@ -193,7 +193,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_select_san2"
@@ -203,7 +204,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_select_san3"
@@ -213,7 +215,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_select_san4"
@@ -223,7 +226,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
             </LinearLayout>
 
@@ -294,7 +298,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_select_san6"
@@ -304,7 +309,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_select_san7"
@@ -314,7 +320,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_select_san8"
@@ -324,7 +331,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
             </LinearLayout>
 
@@ -395,7 +403,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_select_san10"
@@ -405,7 +414,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_select_san11"
@@ -415,7 +425,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_select_san12"
@@ -425,7 +436,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_add" />
+                    android:src="@drawable/ic_add"
+                    android:focusable="false"/>
 
             </LinearLayout>
     </LinearLayout>

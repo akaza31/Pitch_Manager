@@ -140,7 +140,7 @@ public class DatSanChiTietActivity extends AppCompatActivity {
             showLichHoatDong();
             setUpTvMocTg("", type_cancel);
 
-            btnDatSan.setText("Cập nhật");
+            btnDatSan.setVisibility(View.INVISIBLE);
         } else {
             setOnClickForImageView();
             pitch = (Pitch) getIntent().getSerializableExtra("PITCH");

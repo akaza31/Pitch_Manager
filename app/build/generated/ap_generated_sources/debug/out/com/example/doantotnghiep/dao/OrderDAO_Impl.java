@@ -799,6 +799,92 @@ public final class OrderDAO_Impl implements OrderDAO {
     return _tmpResult;
   }
 
+  @Override
+  public List<Order> getOrderByCustomerName(final String name) {
+    final String _sql = "SELECT ORDERS.* FROM ORDERS JOIN CUSTOMER ON ORDERS.customerId = CUSTOMER.id WHERE CUSTOMER.name LIKE ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (name == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, name);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+      final int _cursorIndexOfManagerId = CursorUtil.getColumnIndexOrThrow(_cursor, "managerId");
+      final int _cursorIndexOfCustomerId = CursorUtil.getColumnIndexOrThrow(_cursor, "customerId");
+      final int _cursorIndexOfPitchId = CursorUtil.getColumnIndexOrThrow(_cursor, "pitchId");
+      final int _cursorIndexOfDateCreate = CursorUtil.getColumnIndexOrThrow(_cursor, "dateCreate");
+      final int _cursorIndexOfDatePlay = CursorUtil.getColumnIndexOrThrow(_cursor, "datePlay");
+      final int _cursorIndexOfTotalPitchMoney = CursorUtil.getColumnIndexOrThrow(_cursor, "totalPitchMoney");
+      final int _cursorIndexOfTotalServiceMoney = CursorUtil.getColumnIndexOrThrow(_cursor, "totalServiceMoney");
+      final int _cursorIndexOfChiPhiKhac = CursorUtil.getColumnIndexOrThrow(_cursor, "chiPhiKhac");
+      final int _cursorIndexOfTotal = CursorUtil.getColumnIndexOrThrow(_cursor, "total");
+      final int _cursorIndexOfStatus = CursorUtil.getColumnIndexOrThrow(_cursor, "status");
+      final int _cursorIndexOfSoCa = CursorUtil.getColumnIndexOrThrow(_cursor, "soCa");
+      final int _cursorIndexOfSoLanCapNhat = CursorUtil.getColumnIndexOrThrow(_cursor, "soLanCapNhat");
+      final List<Order> _result = new ArrayList<Order>(_cursor.getCount());
+      while(_cursor.moveToNext()) {
+        final Order _item;
+        _item = new Order();
+        final int _tmpId;
+        _tmpId = _cursor.getInt(_cursorIndexOfId);
+        _item.setId(_tmpId);
+        final int _tmpManagerId;
+        _tmpManagerId = _cursor.getInt(_cursorIndexOfManagerId);
+        _item.setManagerId(_tmpManagerId);
+        final int _tmpCustomerId;
+        _tmpCustomerId = _cursor.getInt(_cursorIndexOfCustomerId);
+        _item.setCustomerId(_tmpCustomerId);
+        final int _tmpPitchId;
+        _tmpPitchId = _cursor.getInt(_cursorIndexOfPitchId);
+        _item.setPitchId(_tmpPitchId);
+        final String _tmpDateCreate;
+        if (_cursor.isNull(_cursorIndexOfDateCreate)) {
+          _tmpDateCreate = null;
+        } else {
+          _tmpDateCreate = _cursor.getString(_cursorIndexOfDateCreate);
+        }
+        _item.setDateCreate(_tmpDateCreate);
+        final String _tmpDatePlay;
+        if (_cursor.isNull(_cursorIndexOfDatePlay)) {
+          _tmpDatePlay = null;
+        } else {
+          _tmpDatePlay = _cursor.getString(_cursorIndexOfDatePlay);
+        }
+        _item.setDatePlay(_tmpDatePlay);
+        final int _tmpTotalPitchMoney;
+        _tmpTotalPitchMoney = _cursor.getInt(_cursorIndexOfTotalPitchMoney);
+        _item.setTotalPitchMoney(_tmpTotalPitchMoney);
+        final int _tmpTotalServiceMoney;
+        _tmpTotalServiceMoney = _cursor.getInt(_cursorIndexOfTotalServiceMoney);
+        _item.setTotalServiceMoney(_tmpTotalServiceMoney);
+        final int _tmpChiPhiKhac;
+        _tmpChiPhiKhac = _cursor.getInt(_cursorIndexOfChiPhiKhac);
+        _item.setChiPhiKhac(_tmpChiPhiKhac);
+        final int _tmpTotal;
+        _tmpTotal = _cursor.getInt(_cursorIndexOfTotal);
+        _item.setTotal(_tmpTotal);
+        final int _tmpStatus;
+        _tmpStatus = _cursor.getInt(_cursorIndexOfStatus);
+        _item.setStatus(_tmpStatus);
+        final int _tmpSoCa;
+        _tmpSoCa = _cursor.getInt(_cursorIndexOfSoCa);
+        _item.setSoCa(_tmpSoCa);
+        final int _tmpSoLanCapNhat;
+        _tmpSoLanCapNhat = _cursor.getInt(_cursorIndexOfSoLanCapNhat);
+        _item.setSoLanCapNhat(_tmpSoLanCapNhat);
+        _result.add(_item);
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
   public static List<Class<?>> getRequiredConverters() {
     return Collections.emptyList();
   }

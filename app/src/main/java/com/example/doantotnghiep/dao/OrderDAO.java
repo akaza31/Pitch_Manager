@@ -75,4 +75,6 @@ public interface OrderDAO {
     @Query("SELECT SUM(totalPitchMoney)+SUM(chiPhiKhac) FROM ORDERS WHERE dateCreate LIKE :s AND ORDERS.status != :status")
     Cursor getDoanhThuSanBong(String s,int status);
 
+    @Query("SELECT ORDERS.* FROM ORDERS JOIN CUSTOMER ON ORDERS.customerId = CUSTOMER.id WHERE CUSTOMER.name LIKE :name")
+    List<Order> getOrderByCustomerName(String name);
 }

@@ -22,15 +22,15 @@ public class SplashActivity extends AppCompatActivity {
     LottieAnimationView lottieAnimationView;
     TextView tv;
 
-    String textAdmin = "Bạn sẽ quản lý sân bóng dễ dàng hơn nhờ Soccer Management.";
-    String textAdmin2 = "Bạn sẽ quản lý khách hàng dễ dàng hơn nhờ Soccer Management.";
-    String textAdmin3 = "Bạn sẽ tích kiệm được thời gian quản lý nếu dùng Soccer Management";
-    String textAdmin4 = "Bạn đã biết, có thể thêm sửa dịch vụ trong Soccer Management";
+    String textAdmin = "Bạn sẽ quản lý sân bóng dễ dàng hơn nhờ Green Sports App.";
+    String textAdmin2 = "Bạn sẽ quản lý khách hàng dễ dàng hơn nhờ Green Sports App.";
+    String textAdmin3 = "Bạn sẽ tích kiệm được thời gian quản lý nếu dùng Green Sports App";
+    String textAdmin4 = "Bạn đã biết, có thể thêm sửa dịch vụ trong Green Sports App";
     List<String> listStringAdmin = new ArrayList<>(Arrays.asList(textAdmin,textAdmin2,textAdmin3,textAdmin4));
 
-    String textUser = "Bạn sẽ tích kiệm thời gian đặt sân với Soccer Management.";
+    String textUser = "Bạn sẽ tích kiệm thời gian đặt sân với Green Sports App.";
     String textUser2 = "Bạn đã biết, có thể thay đổi avatar trong profile.";
-    String textUser3 = "Bạn có thể đặt sân bóng online nhanh chóng với Soccer Management";
+    String textUser3 = "Bạn có thể đặt sân bóng online nhanh chóng với Green Sports App";
     String textUser4 = "Bạn có thể xem lại lịch sử đặt sân trong phần lịch sử đặt hàng";
     List<String> listStringUser = new ArrayList<>(Arrays.asList(textUser,textUser2,textUser3,textUser4));
 
